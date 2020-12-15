@@ -1,35 +1,15 @@
-<?php
+<?php 
 
-    $person = [
 
-        'age' => '20',
+    $task = [
 
-        'hairColor' => 'black',
+        'title' => 'do something',
 
-        'career' => 'web developer',
+        'assigned_to' => 'john',
 
-        'school' => 'myanmar school'
+        'completed' => false
 
     ];
 
-    // $tasks =  title, assigned_to, completed
 
-
-    $person['address'] = 'Yangon';
-
-    unset($person['school']);
-
-
-    // die(var_dump($person));
-
-    var_dump($person);
-
-    echo "keep going";
-    
     require 'index.view.php';
-
-
-
-?>
-
-
