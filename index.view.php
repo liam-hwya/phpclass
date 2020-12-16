@@ -7,37 +7,44 @@
 </head>
 <body>
 
-    <header>
+    <ul>
 
-        <ul>
-        
-            <?php
+        <li>
 
-                foreach($person as $key => $feature) : 
+            Task Title = <?= ucwords($task['title']) ?>
+
+        </li>
+
+        <li>
+
+            Task Assigned To = <?= ucwords($task['assigned_to']) ?>
+
+        </li>
+
+        <li>
+
+            Task Status = 
+
+            <?php 
+
+                // echo ($task['completed']) ? "Complete" : "Incomplete";
+
+                if($task['completed']) {
+
+                    echo "Complete";
+
+                }else{
+
+                    echo "Incomplete";
+
+                }
 
             ?>
 
-                <li>
+        </li>
 
-                    <small><?= $key ?></small>
 
-                    <strong>
-
-                        <?= $feature; ?>
-
-                    </strong>
-            
-                </li>
-
-            <?php
-
-                endforeach
-
-            ?>
-
-        </ul>
-
-    </header>
+    </ul>
     
 </body>
 </html>

@@ -1,35 +1,31 @@
 <?php
 
+    require 'function.php';
+
     $person = [
 
-        'age' => '20',
+        'name' => 'john',
 
-        'hairColor' => 'black',
+        'age' => 30,
 
-        'career' => 'web developer',
-
-        'school' => 'myanmar school'
-
+        'job' => 'student'
     ];
 
-    // $tasks =  title, assigned_to, completed
+    $product = "something";
 
-
-    $person['address'] = 'Yangon';
-
-    unset($person['school']);
-
-
-    // die(var_dump($person));
-
-    var_dump($person);
-
-    echo "keep going";
     
-    require 'index.view.php';
+
+    dd($person);
+
+    //addNums();
+
+    //subtractNums();
+
+    
+
+    
 
 
 
 ?>
-
 
