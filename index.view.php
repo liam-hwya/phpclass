@@ -8,80 +8,26 @@
 <body>
 
     <ul>
-<<<<<<< HEAD
 
-        <li>
+        <?php foreach($tasks as $task): ?>
 
-            Task Title = <?= ucwords($task['title']) ?>
+            <?php
+            
+                if($task->isComplete()){
 
-        </li>
-
-        <li>
-
-            Task Assigned To = <?= ucwords($task['assigned_to']) ?>
-
-        </li>
-
-        <li>
-
-            Task Status = 
-
-            <?php 
-
-                // echo ($task['completed']) ? "Complete" : "Incomplete";
-
-                if($task['completed']) {
-
-                    echo "Complete";
+                    echo "<li><strike>".$task->getDescription()."</strike></li>";
 
                 }else{
 
-                    echo "Incomplete";
+                    echo "<li>".$task->getDescription()."</li>";
 
                 }
-
+            
             ?>
 
-        </li>
+        <?php endforeach; ?>
 
 
-=======
-    
-        <li>
-        
-            Task Title : <?= ucwords($task['title']); ?>
-        
-        </li>
-
-        <li>
-        
-            Task Assigned To : <?= ucwords($task['assigned_to']); ?>
-        
-        </li>
-
-        <li>
-        
-            Task Status : 
-
-            <?php 
-
-                echo ($task['completed'])? "Complete" : "Incomplete";
-
-                // if($task['completed']){
-
-                //     echo "Complete";
-
-                // }else{
-
-                //     echo "Incomplete";
-
-                // }
-
-            ?>
-        
-        </li>
-    
->>>>>>> adaed468a2580ca1d1c14b395f2d1c7d81b5ac5a
     </ul>
     
 </body>
