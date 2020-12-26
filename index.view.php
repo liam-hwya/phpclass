@@ -8,26 +8,30 @@
 <body>
 
     <ul>
-
+    
         <?php foreach($tasks as $task): ?>
 
-            <?php
+            <li>
             
-                if($task->isComplete()){
+                <?php
+                
+                    if($task->completed){
 
-                    echo "<li><strike>".$task->getDescription()."</strike></li>";
 
-                }else{
+                        echo "<strike>$task->description</strike>";
 
-                    echo "<li>".$task->getDescription()."</li>";
+                    }else{
 
-                }
+                        echo "$task->description";
+
+                    }
+                
+                ?>
             
-            ?>
+            </li>
 
         <?php endforeach; ?>
-
-
+    
     </ul>
     
 </body>
