@@ -5,7 +5,7 @@
     $query = require 'bootstrap.php';
     
 
-    $tasks = $query->selectAll('tasks');
+    $tasks = $query->selectAll('tasksa');
     
 
     require 'index.view.php';
