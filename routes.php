@@ -4,7 +4,7 @@
 
         '' => 'controllers/index.php',
 
-        'product' => 'controllers/product.php',
+        'shop' => 'controllers/product.php',
 
         'contact' => 'controllers/contact.php',
 
