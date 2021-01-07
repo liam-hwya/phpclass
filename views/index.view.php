@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
-    <ul>
-    
-        <li><a href="index.php">Home</a></li>
 
-        <li><a href="product.php">Product</a></li>
-        
-        <li><a href="contact.php">Contact</a></li>
 
-    </ul>
+    <?php require 'partials/header.view.php'; ?>
 
     <ul>
     
@@ -43,9 +29,7 @@
         <?php endforeach; ?>
     
     </ul>
-    
-</body>
-</html>
 
 
+    <?php require 'partials/footer.view.php'; ?>
 
