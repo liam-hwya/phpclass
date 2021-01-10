@@ -3,32 +3,16 @@
 
     <?php require 'partials/header.view.php'; ?>
 
-    <ul>
+   
+    <h1>User Form</h1>
+
+    <form action="users" method="POST">
     
-        <?php foreach($tasks as $task): ?>
+        <input type="text" name="user">
 
-            <li>
-            
-                <?php
-                
-                    if($task->completed){
+        <button type="submit">Add</button>
 
-
-                        echo "<strike>$task->description</strike>";
-
-                    }else{
-
-                        echo "$task->description";
-
-                    }
-                
-                ?>
-            
-            </li>
-
-        <?php endforeach; ?>
-    
-    </ul>
+    </form>
 
 
     <?php require 'partials/footer.view.php'; ?>
