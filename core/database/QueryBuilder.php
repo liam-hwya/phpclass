@@ -20,6 +20,41 @@
 
     }
 
+    public function insert($table,$parameters){
+
+        //insert into users (username,email) values (:username,:email);
+
+        $query = sprintf(
+
+            'insert into %s (%s) values (%s)',
+
+            $table,
+
+            implode(',',array_keys($parameters)), //username,email
+
+            ':'.implode(',:',array_keys($parameters)) //:username,:email,:password
+
+        );
+
+        try{
+        
+            $statement = $this->pdo->prepare($query);
+
+            $statement->execute($parameters);
+        
+        }catch(Exception $e){
+        
+          die($e->getMessage());
+        
+        }
+
+        
+
+        
+      
+    }
+    
+
  }
 
 ?>
