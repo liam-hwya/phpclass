@@ -50,13 +50,28 @@
 
             if(array_key_exists($uri,$this->routes[$requestType])){
 
-                return $this->routes[$requestType][$uri];
+                return $this->callMethod(...explode('@',$this->routes[$requestType][$uri]));
 
             }
 
             throw new Exception("NO route defined");
           
         }
+
+        public function callMethod($controller,$method){
+
+            $controller = new $controller; 
+
+            if(!method_exists($controller,$method)){
+
+                throw new Exception('Method could not found');
+
+            }
+
+            return $controller->$method();
+          
+        }
+        
         
         
 
